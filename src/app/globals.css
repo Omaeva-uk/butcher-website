@@ -54,3 +54,22 @@ body {
 .preloader-fade-out {
   animation: fade-out 0.35s ease forwards;
 }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 8px, 0);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[data-reveal="up"].reveal { transform: translate3d(0, 16px, 0); }
+[data-reveal="down"].reveal { transform: translate3d(0, -16px, 0); }
+[data-reveal="left"].reveal { transform: translate3d(16px, 0, 0); }
+[data-reveal="right"].reveal { transform: translate3d(-16px, 0, 0); }
+[data-reveal="none"].reveal { transform: translate3d(0, 0, 0); }

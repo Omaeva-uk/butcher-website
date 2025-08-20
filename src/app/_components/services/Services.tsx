@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import PrimaryButton from "../primary-button/PrimaryButton";
 import Sectiontitle from "../Sectiontitle";
 import Link from "next/link";
 import HorizontalLine from "../HorizontalLine";
+import Reveal from "../animation/Reveal";
 
 
 type ServiceData = {
@@ -52,21 +55,27 @@ const servicesData = {
 
 const Services = () => {
   return (
-    <section className="container mt-12 lg:mt-22 p-6 lg:px-22 lg:py-12">
-        <Sectiontitle title="Our Range" />
-        <p className="font-merriweather mt-6 max-w-2xl text-sm md:text-md lg:text-lg">{servicesData.mainPara}</p>
+    <section id="services" className="container mt-12 lg:mt-22 p-6 lg:px-22 lg:py-12">
+        <Reveal>
+          <Sectiontitle title="Our Range" />
+        </Reveal>
+        <Reveal delay={50}>
+          <p className="font-merriweather mt-6 max-w-2xl text-sm md:text-md lg:text-lg">{servicesData.mainPara}</p>
+        </Reveal>
         {/* <div className="text-right mt-6">
             <PrimaryButton text="View all" />
         </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 mt-12 gap-3">
             {
                 servicesData.services.map((service) => (
-                    <div key={service.id} className="max-md:mb-6">
-                        <div className="max-h-[350px] relative h-[350px] mb-3 w-full text-main-color overflow-hidden">
-                            <Image src={service.image} fill alt="Service images" className=" object-cover object-center" />
-                        </div>
-                        <Link href="" className="mt-3 font-merriweather text-main-color">{service.title}</Link>
-                    </div>
+                    <Reveal key={service.id} delay={service.id ? service.id * 60 : 0}>
+                      <div className="max-md:mb-6">
+                          <div className="max-h-[350px] relative h-[350px] mb-3 w-full text-main-color overflow-hidden">
+                              <Image src={service.image} fill alt="Service images" className=" object-cover object-center" />
+                          </div>
+                          <Link href="" className="mt-3 font-merriweather text-main-color">{service.title}</Link>
+                      </div>
+                    </Reveal>
                 ))
             }
         </div>

@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Sectiontitle from "../_components/Sectiontitle";
 import { HorizontalLine, PrimaryButton } from "../_components";
+import Link from "next/link";
+import Reveal from "../_components/animation/Reveal";
 
 
 const visitUsData = [
@@ -35,14 +39,24 @@ const VisitUs = () => {
                 visitUsData.map(item => (
                     <div key={item.id} className="grid grid-cols-1 md:grid-cols-2 items-center">
                         <div className={`${item.id === 2 ? 'order-1' : 'order-0'} text-center max-md:mb-6 flex p-3 flex-col items-center`}>
-                            <Sectiontitle title={item.title} />
-                            <h3 className="font-cinzel text-xl lg:text-2xl xl:text-4xl max-w-[380px] mt-3 mb-6 font-semibold">{item.subtitle}</h3>
-                            <p className="font-lato max-w-xl text-sm md:text-md lg:text-lg mb-10">{item.description}</p>
-                            <PrimaryButton text={item.buttonText}  />
+                            <Reveal>
+                              <Sectiontitle title={item.title} />
+                            </Reveal>
+                            <Reveal delay={50}>
+                              <h3 className="font-cinzel text-xl lg:text-2xl xl:text-4xl max-w-[380px] mt-3 mb-6 font-semibold">{item.subtitle}</h3>
+                            </Reveal>
+                            <Reveal delay={100}>
+                              <p className="font-lato max-w-xl text-sm md:text-md lg:text-lg mb-10">{item.description}</p>
+                            </Reveal>
+                            <Reveal delay={150}>
+                              <Link target="_blank" href={`${item.id === 2 ? 'tel:07424274823' : 'https://maps.app.goo.gl/AZ4BGVFALRqA4tsW7'}`} className="cursor-pointer"><PrimaryButton text={item.buttonText}  /></Link>
+                            </Reveal>
                         </div>
-                        <div className={`${item.id === 2 ? 'order-0' : 'order-1'} h-[350px] max-md:mt-6 lg:h-[650px] w-full relative`}>
-                            <Image src={item.image}  fill alt=" " />
-                        </div>
+                        <Reveal>
+                          <div className={`${item.id === 2 ? 'order-0' : 'order-1'} h-[350px] max-md:mt-6 lg:h-[650px] w-full relative`}>
+                              <Image src={item.image}  fill alt=" " />
+                          </div>
+                        </Reveal>
                     </div>
                 ))
             }

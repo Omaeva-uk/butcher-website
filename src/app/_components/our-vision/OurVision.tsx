@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react'
 import Sectiontitle from '../Sectiontitle';
 import Image from 'next/image';
 import visionBadge from "../../../../public/assets/our-vision-badge.png";
 import HorizontalLine from '../HorizontalLine';
+import Reveal from "../animation/Reveal";
 
 
 const values = [
@@ -29,17 +32,23 @@ const values = [
 const OurVision = () => {
   return (
     <section id='about-us' className='container px-6 lg:px-22'>
-        <Sectiontitle title='Our Vision' />
-        <div className='max-w-fit ml-auto'>
-            <Image src={visionBadge} height={200} width={200} alt='Vision' className=' border-4' />
-        </div>
+        <Reveal>
+          <Sectiontitle title='Our Vision' />
+        </Reveal>
+        <Reveal delay={50}>
+          <div className='max-w-fit ml-auto'>
+              <Image src={visionBadge} height={200} width={200} alt='Vision' className=' border-4' />
+          </div>
+        </Reveal>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-12'>
           {
             values.map(value => (
-              <div key={value.id}>
-                <h3 className='font-cinzel font-bold text-lg'>{value.title}</h3>
-                <p className='mt-3 font-merriweather text-sm md:text-md lg:text-lg leading-[170%] text-gray-700'>{value.description}</p>
-              </div>
+              <Reveal key={value.id} delay={(value.id ?? 0) * 80}>
+                <div>
+                  <h3 className='font-cinzel font-bold text-lg'>{value.title}</h3>
+                  <p className='mt-3 font-merriweather text-sm md:text-md lg:text-lg leading-[170%] text-gray-700'>{value.description}</p>
+                </div>
+              </Reveal>
             ))
           }
         </div>

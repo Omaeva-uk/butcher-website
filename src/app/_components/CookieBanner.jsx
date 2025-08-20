@@ -42,7 +42,7 @@ export default function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed right-6 bottom-6 z-[9999] max-w-xs md:max-w-sm bg-main-color text-white rounded-xl shadow-2xl p-6 flex flex-col gap-4 border border-blue-100 animate-fade-in">
+    <div className="fixed right-6 bottom-6 z-[99] max-w-xs md:max-w-sm bg-main-color text-white rounded-xl shadow-2xl p-6 flex flex-col gap-4 border border-blue-100 animate-fade-in">
       <div className="text-base mb-1">
         We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="/privacy-policy" className="underline text-blue-200 ml-1">Learn more</a>
       </div>

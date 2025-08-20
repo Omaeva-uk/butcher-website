@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react'
 import Sectiontitle from '../Sectiontitle';
 import HorizontalLine from '../HorizontalLine';
+import Reveal from "../animation/Reveal";
 
 const testimonials = [
   {
@@ -26,14 +29,18 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <section className='container px-6 lg:px-12'>
-        <Sectiontitle title='What our customers say' />
+        <Reveal>
+          <Sectiontitle title='What our customers say' />
+        </Reveal>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-12'>
           {
             testimonials.map( item => (
-              <div key={item.id}>
-                <h3 className='font-cinzel font-bold text-lg'>{item.name}</h3>
-                <p className='mt-3 font-merriweather text-sm md:text-md lg:text-lg leading-[170%] text-gray-700'>{item.review}</p>
-              </div>
+              <Reveal key={item.id} delay={(item.id ?? 0) * 80}>
+                <div>
+                  <h3 className='font-cinzel font-bold text-lg'>{item.name}</h3>
+                  <p className='mt-3 font-merriweather text-sm md:text-md lg:text-lg leading-[170%] text-gray-700'>{item.review}</p>
+                </div>
+              </Reveal>
             ))
           }
         </div>
