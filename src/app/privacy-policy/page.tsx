@@ -5,7 +5,7 @@ const page = () => {
         <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-5 md:p-7 mb-8 shadow-sm">
           <h1 className="text-3xl md:text-4xl font-extrabold text-red-900 mb-2 tracking-tight">Privacy Policy</h1>
           <p className="mb-2 text-base md:text-lg text-gray-700">
-            This Privacy Policy governs the Websites operated by Cilicosys. (hereinafter, "us", "we", or “Cilicosys”), including, without limitation, the Website currently located at <a href="https://www.cilicosys.com" className="text-red-700 underline break-all hover:text-red-900">https://www.cilicosys.com</a>, By using the Website, you consent to the collection and use of your personal information as outlined in this Privacy Policy.
+            This Privacy Policy governs the Websites operated by Amal Al-Shah. (hereinafter, "us", "we", or “Amal Al-Shah”), including, without limitation, the Website currently located at <a href="https://www.Amal Al-Shah.com" className="text-red-700 underline break-all hover:text-red-900">https://www.Amal Al-Shah.com</a>, By using the Website, you consent to the collection and use of your personal information as outlined in this Privacy Policy.
           </p>
           <p className="text-base md:text-lg text-gray-700">
             We have adopted this Privacy Policy to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties.
@@ -14,13 +14,13 @@ const page = () => {
         <section className="mb-8">
           <h2 className="text-xl md:text-2xl font-bold text-red-800 border-l-4 border-red-200 pl-3 bg-red-50 rounded mb-3">1. Website Visitors</h2>
           <p className="text-gray-700 mb-3">
-            Cilicosys automatically collects non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Cilicosys's purpose in collecting non-personally identifying information is to better understand how Cilicosys's visitors use its website.
+            Amal Al-Shah automatically collects non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Amal Al-Shah's purpose in collecting non-personally identifying information is to better understand how Amal Al-Shah's visitors use its website.
           </p>
         </section>
         <section className="mb-8">
           <h2 className="text-xl md:text-2xl font-bold text-red-800 border-l-4 border-red-200 pl-3 bg-red-50 rounded mb-3">2. Gathering of Information</h2>
           <p className="text-gray-700 mb-3">
-            Certain visitors to Cilicosys websites choose to interact with Cilicosys in ways that require Cilicosys to gather personally identifying information. For example, we ask visitors to submit their details like a name and email address to discuss their projects.
+            Certain visitors to Amal Al-Shah websites choose to interact with Amal Al-Shah in ways that require Amal Al-Shah to gather personally identifying information. For example, we ask visitors to submit their details like a name and email address to discuss their projects.
           </p>
         </section>
         <section className="mb-8">
@@ -61,7 +61,7 @@ const page = () => {
         <section className="mb-2">
           <h2 className="text-xl md:text-2xl font-bold text-red-800 border-l-4 border-red-200 pl-3 bg-red-50 rounded mb-3">8. Contact Us</h2>
           <p className="text-gray-700">
-            For questions or to exercise your GDPR rights, contact us at: <a href="mailto:info@cilicosys.com" className="text-red-700 underline hover:text-red-900">info@cilicosys.com</a>
+            For questions or to exercise your GDPR rights, contact us at: <a href="mailto:amalalshamderby@gmail.com" className="text-red-700 underline hover:text-red-900">amalalshamderby@gmail.com</a>
           </p>
         </section>
       </div>
