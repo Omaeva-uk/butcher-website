@@ -6,7 +6,7 @@ type RevealDirection = "up" | "down" | "left" | "right" | "none";
 
 type RevealProps = {
   children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
   className?: string;
   delay?: number; // ms
   durationMs?: number; // ms
