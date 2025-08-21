@@ -11,7 +11,7 @@ import Reveal from "../animation/Reveal";
 
 const Cta = () => {
   return (
-    <section id='contact-us' className='container px-6 lg:px-6'>
+    <section id='contact-us' className='container px-6 pb-12 lg:px-6'>
         <Reveal>
           <div className=' relative max-md:h-[350px] h-[570px] w-full'>
               <Image src={ctaImage} fill alt='man selling meat' />
@@ -48,7 +48,6 @@ const Cta = () => {
                 </Reveal>
             </div>
         </div>
-        <HorizontalLine />
     </section>
   )
 }
