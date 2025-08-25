@@ -21,7 +21,7 @@ export default function CookieBanner() {
 
     // ✅ Load Google Analytics on accept
     const script = document.createElement('script')
-    script.src = ''
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WZY4LS7WL2'
     script.async = true
     document.head.appendChild(script)
 
@@ -30,7 +30,7 @@ export default function CookieBanner() {
       window.dataLayer.push(arguments)
     }
     gtag('js', new Date())
-    gtag('config', '')
+    gtag('config', 'G-WZY4LS7WL2')
   }
 
 

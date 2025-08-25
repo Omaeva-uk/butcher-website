@@ -4,15 +4,24 @@ import { notFound } from "next/navigation";
 import { recipes } from "../data";
 import Reveal from "../../_components/animation/Reveal";
 
-type Params = { params: { slug: string } };
+type Props = {
+  params: { slug: string };
+};
 
 export function generateStaticParams() {
   return recipes.map((r) => ({ slug: r.slug }));
 }
 
-export default function RecipeDetailPage({ params }: Params) {
-  const recipe = recipes.find((r) => r.slug === params.slug);
+export default async function RecipeDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+
+  const { slug } = await params;
+  const recipe =  recipes.find((r) => r.slug === slug);
   if (!recipe) return notFound();
+
 
   return (
     <article className="container px-6 lg:px-12 py-12">

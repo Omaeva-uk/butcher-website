@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Cinzel, Merriweather, Lato } from "next/font/google"
 
 import "./globals.css";
 import { CookieBanner, Footer, Navbar, Preloader } from "./_components";
+import Head from "next/head";
 
 
 const cinzel = Cinzel({
@@ -35,6 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+          <meta name="google-site-verification" content="WvGWnUXJmg33QXiJ8eB848JlEbs6O8wFs1reW7UvREc" />
+      </head>
       <body
         className={`${cinzel.variable} ${merriweather.variable} ${lato.variable} antialiased`}
       >
