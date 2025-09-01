@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-          <meta name="google-site-verification" content="WvGWnUXJmg33QXiJ8eB848JlEbs6O8wFs1reW7UvREc" />
+          <meta name="google-site-verification" content="FroXiKLIGgc1crOY_QwzVPhSGsIP59HQYXjke2wq7_Q" />
       </head>
       <body
         className={`${cinzel.variable} ${merriweather.variable} ${lato.variable} antialiased`}
